@@ -23,8 +23,24 @@ class Events {
     }
     // 循环执行函数
     fns.forEach(fn => {
-      fn(arguments)
+      fn(arguments);
     });
+  }
+  // 删除key下一个事件
+  removeOnce(key, fn) {
+    let fns = this.mapper[key];
+    if(!fns || fns.length === 0) {
+      return;
+    }
+    this.mapper[key] = fns.filter(i => i !== fn);
+  }
+  // 删除key下绑定的所有事件
+  remove(key) {
+    this.mapper[key] = [];
+  }
+  // 清空
+  empty() {
+    this.mapper = {};
   }
 }
 
