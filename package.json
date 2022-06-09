@@ -1,0 +1,11 @@
+{
+  "name": "design-mode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wangzhuoli/design-mode.git",
+  "author": "wzl <13790767638@sian.cn>",
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  }
+}
